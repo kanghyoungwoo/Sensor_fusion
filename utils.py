@@ -12,16 +12,11 @@ import statistics
 import random
 
 def data_path():
-    # window
     video_images = sorted(glob.glob("data\\data_train\\img\\*.png"))
     video_points = sorted(glob.glob("data\\data_train\\velodyne_pcd\\*.pcd"))
     calib_files = sorted(glob.glob("data\\data_train\\calib\\*.txt"))
     
-    # # linux
-    # video_images = sorted(glob.glob("data/data_train/img/*.png"))
-    # video_points = sorted(glob.glob("data/data_train/velodyne_pcd/*.pcd"))
-    # calib_files = sorted(glob.glob("data/data_train/calib/*.txt"))
-    # print(calib_files[0])
+
     return video_images, video_points, calib_files
 
 def yolo_make():
