@@ -53,11 +53,6 @@ class LiDAR2Camera(object):
                     pass
         return data
 
-    def cart2hom(self, pts_3d):
-        n = pts_3d.shape[0]
-        pts_3d_hom = np.hstack((pts_3d, np.ones((n, 1))))
-        return pts_3d_hom
-
     def project_velo_to_image(self, pts_3d_velo):
         R0_homo = np.vstack([self.R0, [0, 0, 0]])
         R0_homo_2 = np.column_stack([R0_homo, [0, 0, 0, 1]])
